@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoLedger — Account Deletion</title>
+  <meta name="description" content="Learn how to delete your CoLedger account. Step-by-step guide for account deletion and data removal." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #F7F5EE;
+      color: #1C2D2B;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .app-meta h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #115E59;
+      line-height: 1.2;
+    }
+
+    .app-meta .subtitle {
+      font-size: 14px;
+      color: #586963;
+    }
+
+    /* Cards */
+    .card {
+      background: #FFFDF7;
+      border: 1px solid #DADACD;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1C2D2B;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #586963;
+      margin-bottom: 8px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Steps */
+    .steps {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #EDF1E9;
+      align-items: flex-start;
+    }
+
+    .steps li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: #115E59;
+      color: #FFFDF7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .step-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .step-content strong {
+      display: block;
+      font-size: 15px;
+      color: #1C2D2B;
+      margin-bottom: 2px;
+    }
+
+    .step-content span {
+      font-size: 14px;
+      color: #586963;
+    }
+
+    .step-content .note {
+      display: block;
+      font-size: 13px;
+      color: #808A82;
+      margin-top: 4px;
+      padding: 8px 12px;
+      background: #EDF1E9;
+      border-radius: 8px;
+    }
+
+    .step-content .note-danger {
+      background: #FEF2F2;
+      color: #C2413A;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: #DADACD;
+      margin: 24px 0;
+    }
+
+    /* What gets deleted */
+    .data-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .data-list li {
+      font-size: 14px;
+      color: #586963;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .data-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      background: #115E59;
+      border-radius: 50%;
+    }
+
+    /* Contact */
+    .contact-info {
+      font-size: 14px;
+      color: #586963;
+    }
+
+    .contact-info a {
+      color: #115E59;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .contact-info a:hover {
+      color: #0C4441;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid #DADACD;
+      margin-top: 40px;
+    }
+
+    footer .studio {
+      font-size: 13px;
+      color: #808A82;
+    }
+
+    footer .studio strong {
+      color: #115E59;
+      font-weight: 600;
+    }
+
+    footer .version {
+      font-size: 12px;
+      color: #808A82;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <img
+        class="app-icon"
+        src="icon.png"
+        alt="CoLedger icon"
+        width="56"
+        height="56"
+      />
+      <div class="app-meta">
+        <h1>CoLedger</h1>
+        <div class="subtitle">Account Deletion Procedure</div>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <div class="card">
+      <p>
+        This guide explains how to permanently delete your CoLedger account
+        and all associated data directly from within the app.
+      </p>
+      <p>
+        <strong>Important:</strong> Account deletion is irreversible. Once
+        confirmed, your profile, businesses, transactions, and all related
+        data will be permanently removed.
+      </p>
+    </div>
+
+    <!-- Step-by-step -->
+    <div class="card">
+      <h2>Step-by-Step Instructions</h2>
+
+      <ol class="steps">
+        <li>
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <strong>Open CoLedger</strong>
+            <span>Launch the app on your device and navigate to the <strong>Settings</strong> tab (bottom navigation bar).</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>Scroll to the Account section</strong>
+            <span>Scroll down until you see the <strong>Account</strong> section with the <strong>Delete Account</strong> option.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>Tap "Delete Account"</strong>
+            <span>A confirmation dialog will appear explaining that this action is permanent and cannot be undone.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <strong>Confirm deletion</strong>
+            <span>Tap <strong>Delete</strong> to confirm. Your account and all associated data will be permanently deleted.</span>
+
+            <!-- Pro subscriber note -->
+            <div class="note note-danger">
+              <strong>Pro subscribers:</strong> If you have an active subscription, the app will prompt you to cancel it first
+              via the Google Play Store. You can still proceed with deletion, but your subscription will remain active
+              unless cancelled separately through the Play Store.
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Data Deleted -->
+    <div class="card">
+      <h2>Data That Will Be Removed</h2>
+      <p>Deleting your account removes the following data permanently:</p>
+      <ul class="data-list">
+        <li>Your profile and account information</li>
+        <li>All businesses you created</li>
+        <li>All transaction records and ledgers</li>
+        <li>Business partner relationships</li>
+        <li>Settlement history</li>
+        <li>Any saved preferences or settings</li>
+      </ul>
+    </div>
+
+    <!-- Data Retention -->
+    <div class="card">
+      <h2>Data Retention Period</h2>
+      <p>
+        Account deletion is processed immediately. Data is removed from active
+        systems upon confirmation. Backups may retain data for up to 30 days
+        before being fully purged.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <h2>Need Help?</h2>
+      <p class="contact-info">
+        If you encounter any issues while deleting your account, or if you
+        require assistance, please contact us at
+        <a href="mailto:support@bitparallax.com">support@bitparallax.com</a>.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="studio">
+        A <strong>BitParallax</strong> Studio App
+      </div>
+      <div class="version">CoLedger v1.0.4</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
