@@ -78,6 +78,35 @@
       margin-bottom: 0;
     }
 
+    /* Data List */
+    .data-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .data-list li {
+      font-size: 15px;
+      color: #586963;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .data-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      background: #115E59;
+      border-radius: 50%;
+    }
+
+    .data-list strong {
+      color: #1C2D2B;
+    }
+
     /* Links */
     .link-list {
       list-style: none;
@@ -171,8 +200,18 @@
     <div class="card">
       <h2>Welcome to CoLedger</h2>
       <p>
-        CoLedger is the simple, secure way to track shared expenses, manage business accounts, and settle balances with partners directly from your device.
+        CoLedger is a calm financial instrument tailored for small partner-run businesses. It provides a simple, secure way to track shared expenses, manage business accounts, and settle balances with partners directly from your device.
       </p>
+    </div>
+
+    <!-- Features -->
+    <div class="card">
+      <h2>Core Features</h2>
+      <ul class="data-list">
+        <li><strong>Contracts & Assigned Expenses:</strong> Easily log operational costs and assign clear responsibilities between partners.</li>
+        <li><strong>Settlement Engine:</strong> Instantly calculate fair balances for all parties involved without the guesswork.</li>
+        <li><strong>Double-Handshake System:</strong> Ensure operations stay trustworthy and conflict-free by requiring mutual agreement on transactions.</li>
+      </ul>
     </div>
 
     <!-- Quick Links -->
@@ -193,7 +232,7 @@
       <h2>Need Help?</h2>
       <p class="contact-info">
         If you have questions or require support, please contact us at
-        <a href="mailto:support@bitparallax.com">support@bitparallax.com</a>.
+        <a href="mailto:parallaxbit@gmail.com">parallaxbit@gmail.com</a>.
       </p>
     </div>
 
